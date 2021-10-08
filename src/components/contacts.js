@@ -49,21 +49,7 @@ class Contacts extends Component {
     });
   };
 
-  componentDidMount() {
-    
-    const LocalContacts = localStorage.getItem("contacts");
-    const parsedLocalContacts = JSON.parse(LocalContacts);
-    if (parsedLocalContacts) {
-      this.setState({ contacts: parsedLocalContacts });
-    }
-     
-  }
-
-  componentDidUpdate(preProps, prevState) {
-    if (this.state.contacts !== prevState.contacts) {
-      localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
-    }
-  }
+  
 
     render() {
       const filteredContacts = this.state.contacts.filter((contact) =>
