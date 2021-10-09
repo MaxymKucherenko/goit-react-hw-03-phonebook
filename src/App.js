@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Form from "./components/Form";
-import ContactsList from "./components/contactList";
-import Filter from "./components/filter";
+import ContactsList from "./components/СontactList";
+import Filter from "./components/Filter";
 import "./App.css";
 
 class App extends Component {
@@ -12,17 +12,15 @@ class App extends Component {
       { id: "id-3", name: "Eden Clements", number: "645-17-79" },
       { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
     ],
-    filter: "",
+    filter: '',
   };
 
-  formSubmitHandler = (data) => {
-    console.log(data);
-  };
   createContact = (newContact) => {
     this.setState(({ contacts }) => ({
       contacts: [...this.state.contacts, newContact],
     }));
   };
+
   handleCheckContact = (name) => {
     const { contacts } = this.state;
     const isExistContact = !!contacts.find(
