@@ -17,7 +17,7 @@ class App extends Component {
 
   createContact = (newContact) => {
     this.setState(({ contacts }) => ({
-      contacts: [contacts, newContact],
+      contacts: [...contacts, newContact],
     }));
   };
 
