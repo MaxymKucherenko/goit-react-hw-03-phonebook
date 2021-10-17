@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const INITIAL_STATE = {
-  name: "",
-  number: "",
+  name: '',
+  number: '',
 };
 
 class Form extends Component {
@@ -29,7 +29,7 @@ class Form extends Component {
     const { name, number } = this.state;
     const { onCheckUnique } = this.props;
     if (!name || !number) {
-      alert("Some field is empty");
+      alert('Some field is empty');
       return false;
     }
     return onCheckUnique(name);
